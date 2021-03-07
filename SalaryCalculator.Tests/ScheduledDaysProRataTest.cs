@@ -11,7 +11,7 @@ namespace SalaryCalculator.Tests
         {
             get
             {
-                yield return new TestCaseData( new DateTime(2020,4,21), 8m/22m);
+                yield return new TestCaseData(new DateTime(2020, 4, 21), 8m / 22m);
                 yield return new TestCaseData(new DateTime(2020, 4, 1), 1m);
                 yield return new TestCaseData(new DateTime(2020, 2, 29), 0m / 20m);
                 yield return new TestCaseData(new DateTime(2020, 2, 28), 1m / 20m);

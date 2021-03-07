@@ -5,27 +5,20 @@ namespace SalaryCalculator.Core
 {
     public class ScheduledDaysProRataCalculator: IProRataCalculator
     {
-        public ScheduledDaysProRataCalculator()
-        {
-        }
-
         public decimal CalculateProRataRate(DateTime startingDate)
         {
             int daysInMonth = DateTime.DaysInMonth(startingDate.Year, startingDate.Month);
 
             int totalWorkingDays = Enumerable.Range(1, daysInMonth)
-                                        .ToArray()
                                         .Where(day => isWeekDay(startingDate.Year, startingDate.Month, day))
                                         .Count();
 
             int daysWorked = Enumerable.Range(startingDate.Day, daysInMonth - startingDate.Day + 1)
-                                .ToArray()
                                 .Where(d => isWeekDay(startingDate.Year, startingDate.Month, d))
                                 .Count();
 
             return (Decimal)daysWorked / totalWorkingDays;
         }
-
 
         // Assumption is a 5 day normal week and we dont need to account for public holidays.
         // Should we wish to extend this we could inject an IWorkDaySchedule
