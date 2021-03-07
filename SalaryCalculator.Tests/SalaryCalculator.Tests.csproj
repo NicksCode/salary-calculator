@@ -12,4 +12,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SalaryCalculator.Core\SalaryCalculator.Core.csproj" />
+  </ItemGroup>
 </Project>
