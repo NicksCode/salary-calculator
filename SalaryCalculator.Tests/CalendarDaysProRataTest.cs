@@ -7,12 +7,6 @@ namespace SalaryCalculator.Tests
 {
     public class CalendarDaysProRataTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-
         public static IEnumerable<TestCaseData> TestCaseDataSource
         {
             get

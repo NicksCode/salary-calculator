@@ -7,12 +7,6 @@ namespace SalaryCalculator.Tests
 {
     public class ScheduleDaysProRataTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-
         public static IEnumerable<TestCaseData> TestCaseDataSource
         {
             get
@@ -23,7 +17,6 @@ namespace SalaryCalculator.Tests
                 yield return new TestCaseData(new DateTime(2020, 2, 28), 1m / 20m);
             }
         }
-
 
         [Test]
         [TestCaseSource(typeof(ScheduleDaysProRataTest), "TestCaseDataSource")]
